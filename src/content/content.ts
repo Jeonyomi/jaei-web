@@ -14,7 +14,7 @@ export const site = {
   hero: {
     headline: "재이의 첫 무대, 그리고 첫 번째 도전",
     subheadline: "무대 위에서 꿈이 현실이 되는 순간을 함께해주세요.",
-    badges: ["MUSICAL DEBUT", "KILLY GIBSON", "2026 SEASON"],
+    badges: ["BILLY ELLIOT", "MUSICAL DEBUT", "KILLY GIBSON", "2026 SEASON"],
     ctas: [
       { label: "공연 정보 보기", href: "#performance", variant: "primary" as const },
       { label: "응원 메시지 남기기", href: "#guestbook", variant: "secondary" as const },
