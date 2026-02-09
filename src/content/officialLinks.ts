@@ -28,7 +28,6 @@ export const officialLinks: OfficialLink[] = [
   {
     label: "Instagram (빌리 웹진 아카이빙)",
     href: "https://www.instagram.com/billymag_archiving/",
-    note: "아카이빙 계정(비공식 가능) — 출처 확인 권장",
   },
   {
     label: "YouTube Playlist (2026 뮤지컬 빌리 엘리어트)",
