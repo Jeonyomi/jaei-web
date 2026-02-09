@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Highlights } from "@/components/Highlights";
 import { InfoTable } from "@/components/InfoTable";
+import { OfficialLinks } from "@/components/OfficialLinks";
 import { Section } from "@/components/Section";
 import { TicketPanel } from "@/components/TicketPanel";
 import { VenuePanel } from "@/components/VenuePanel";
@@ -49,7 +50,14 @@ export default function Home() {
         </Section>
 
         <Section id="tickets" title={site.tickets.title}>
-          <TicketPanel />
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="md:col-span-2">
+              <TicketPanel />
+            </div>
+            <div className="md:col-span-1">
+              <OfficialLinks />
+            </div>
+          </div>
         </Section>
 
         <Section id="venue" title={site.venue.title}>
