@@ -8,12 +8,14 @@ import { Highlights } from "@/components/Highlights";
 import { InfoTable } from "@/components/InfoTable";
 import { OfficialLinks } from "@/components/OfficialLinks";
 import { Section } from "@/components/Section";
+import { BgmPlayer } from "@/components/BgmPlayer";
 import { TicketPanel } from "@/components/TicketPanel";
 import { VenuePanel } from "@/components/VenuePanel";
 
 export default function Home() {
   return (
     <div className="min-h-dvh bg-zinc-50 text-zinc-950">
+      <BgmPlayer />
       <Header />
       <Hero />
       <Highlights />
