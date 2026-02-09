@@ -21,7 +21,7 @@ export function Hero() {
             ))}
           </div>
 
-          <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-zinc-950 sm:text-5xl">
+          <h1 className="whitespace-pre-line text-4xl font-semibold leading-[1.15] tracking-tight text-zinc-950 sm:text-5xl">
             {site.hero.headline}
           </h1>
           <p className="text-lg leading-8 text-zinc-600">{site.hero.subheadline}</p>

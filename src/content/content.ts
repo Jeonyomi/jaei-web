@@ -12,7 +12,7 @@ export const site = {
     { label: "응원", href: "#guestbook" },
   ] satisfies NavItem[],
   hero: {
-    headline: "재이의 첫 무대, 그리고 첫 번째 도전",
+    headline: "재이의 첫 무대,\n그리고 첫 번째 도전",
     subheadline: "무대 위에서 꿈이 현실이 되는 순간을 함께해주세요.",
     badges: ["BILLY ELLIOT", "MUSICAL DEBUT", "KILLY GIBSON", "2026 SEASON"],
     ctas: [
