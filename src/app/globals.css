@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafafa;
+  --foreground: #09090b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Better focus visibility */
+:focus-visible {
+  outline: 2px solid rgba(9, 9, 11, 0.25);
+  outline-offset: 2px;
+}
