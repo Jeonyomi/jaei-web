@@ -51,7 +51,7 @@ export function Header() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          Menu
+          메뉴
         </button>
       </div>
 
