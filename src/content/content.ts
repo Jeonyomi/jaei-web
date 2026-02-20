@@ -9,6 +9,7 @@ export const site = {
     { label: "예매 안내", href: "#tickets" },
     { label: "공연장", href: "#venue" },
     { label: "갤러리", href: "#gallery" },
+    { label: "수상내역", href: "#awards" },
     { label: "응원", href: "#guestbook" },
   ] satisfies NavItem[],
   hero: {
@@ -103,6 +104,23 @@ export const site = {
       { src: "/gallery/1710929580039.jpg", alt: "재이 프로필 사진 5" },
       { src: "/gallery/1713445456628(1).jpg", alt: "재이 프로필 사진 6" },
     ],
+  },
+  awards: {
+    title: "수상내역",
+    note: "주요 수상 이력을 모아둔 섹션입니다. 공식 발표 기준으로 업데이트됩니다.",
+    items: [
+      {
+        year: "업데이트 예정",
+        award: "공식 수상 이력 정리 중",
+        category: "추가 공지 예정",
+        work: "확인 가능한 출처와 함께 순차 반영",
+      },
+    ] as {
+      year: string;
+      award: string;
+      category: string;
+      work: string;
+    }[],
   },
   guestbook: {
     title: "응원 메시지 남기기",

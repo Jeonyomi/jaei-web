@@ -70,6 +70,36 @@ export default function Home() {
           <Gallery />
         </Section>
 
+        <Section id="awards" title={site.awards.title}>
+          <div className="rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6">
+            <p className="text-sm leading-7 break-keep text-zinc-600 sm:text-[15px]">
+              {site.awards.note}
+            </p>
+
+            <ul className="mt-4 space-y-3 sm:space-y-4">
+              {site.awards.items.map((item) => (
+                <li
+                  key={`${item.year}-${item.award}`}
+                  className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5"
+                >
+                  <p className="text-xs font-semibold tracking-wide text-zinc-500">
+                    {item.year}
+                  </p>
+                  <p className="mt-1 text-base font-semibold leading-7 break-keep text-zinc-950 sm:text-lg">
+                    {item.award}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 break-keep text-zinc-700 sm:text-[15px]">
+                    {item.category}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 break-keep text-zinc-600 sm:text-[15px]">
+                    {item.work}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Section>
+
         <Section id="guestbook" title={site.guestbook.title}>
           <Guestbook />
         </Section>
