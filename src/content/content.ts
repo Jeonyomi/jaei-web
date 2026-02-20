@@ -9,7 +9,7 @@ export const site = {
     { label: "예매 안내", href: "#tickets" },
     { label: "공연장", href: "#venue" },
     { label: "갤러리", href: "#gallery" },
-    { label: "수상내역", href: "#awards" },
+    { label: "수상·활동", href: "#awards" },
     { label: "응원", href: "#guestbook" },
   ] satisfies NavItem[],
   hero: {
@@ -106,20 +106,113 @@ export const site = {
     ],
   },
   awards: {
-    title: "수상내역",
-    note: "주요 수상 이력을 모아둔 섹션입니다. 공식 발표 기준으로 업데이트됩니다.",
+    title: "수상·활동",
+    note: "주요 수상 및 활동 이력을 모아둔 섹션입니다. 공식 발표/프로그램 기준으로 업데이트됩니다.",
     items: [
       {
-        year: "업데이트 예정",
-        award: "공식 수상 이력 정리 중",
-        category: "추가 공지 예정",
-        work: "확인 가능한 출처와 함께 순차 반영",
+        year: "2025",
+        event: "유스스타뮤지컬콩쿠르",
+        venue: "누림아트홀",
+        piece: "뮤지컬 Cats \"Jellicle Songs for Jellicle Cats\"",
+        result: "단체 금상",
+      },
+      {
+        year: "2025",
+        event: "알콩달콩 뮤지컬대회",
+        venue: "코엑스 컨퍼런스룸",
+        piece: "뮤지컬 Hairspray \"Good Morning Baltimore\"",
+        result: "최우수상",
+      },
+      {
+        year: "2025",
+        event: "The Greatest Show",
+        venue: "북아현아트홀",
+        piece: "뮤지컬 Billy Elliot \"Electricity\" 등",
+        result: "무대 공연",
+      },
+      {
+        year: "2025",
+        event: "리틀 뮤지컬 스타",
+        venue: "하남문화예술회관",
+        piece: "뮤지컬 Billy Elliot \"Electricity\"",
+        result: "개인 장려상",
+      },
+      {
+        year: "2025",
+        event: "리틀 뮤지컬 스타",
+        venue: "하남문화예술회관",
+        piece: "뮤지컬 Hairspray \"Good Morning Baltimore\"",
+        result: "단체 우수상",
+      },
+      {
+        year: "2024",
+        event: "Redstage",
+        venue: "스타필드하남",
+        piece: "KATSEYE \"Touch\", NMIXX \"별별별(See that?)\" (K-Pop Dance)",
+        result: "공연",
+      },
+      {
+        year: "2024",
+        event: "경향뮤지컬콩쿠르",
+        venue: "경향아트힐",
+        piece: "뮤지컬 Annie \"Smile\"",
+        result: "초중고등부 단체 우수상",
+      },
+      {
+        year: "2024",
+        event: "리틀 뮤지컬 스타",
+        venue: "하남문화예술회관",
+        piece: "뮤지컬 Annie \"Smile\"",
+        result: "단체 우수상",
+      },
+      {
+        year: "2024",
+        event: "누가 누가 잘하나 912회",
+        venue: "KBS별관 공개홀",
+        piece: "\"메겨라 받아라\"",
+        result: "방송 출연",
+      },
+      {
+        year: "2023",
+        event: "한국해사주간",
+        venue: "서울신라호텔 다이너스티홀",
+        piece: "\"Four Seasons\", \"아기 물고기의 소원\" 등",
+        result: "행사 공연",
+      },
+      {
+        year: "2023",
+        event: "The Greatest Show",
+        venue: "서교스퀘어",
+        piece: "뮤지컬 Annie \"Tomorrow\", \"It’s the Hard Knock Life\" 등",
+        result: "무대 공연",
+      },
+      {
+        year: "2023",
+        event: "The Greatest Show",
+        venue: "서교스퀘어",
+        piece: "뮤지컬 Soul \"The Space is Ruined\", Dammora \"Wolves\" 등",
+        result: "무대 공연",
+      },
+      {
+        year: "2022",
+        event: "국제무용예술전국대회",
+        venue: "온라인",
+        piece: "단체",
+        result: "최우수상",
+      },
+      {
+        year: "2020",
+        event: "Global Korea 무용 콩쿠르",
+        venue: "온라인",
+        piece: "한국무용 군무",
+        result: "우수상",
       },
     ] as {
       year: string;
-      award: string;
-      category: string;
-      work: string;
+      event: string;
+      venue: string;
+      piece: string;
+      result: string;
     }[],
   },
   guestbook: {

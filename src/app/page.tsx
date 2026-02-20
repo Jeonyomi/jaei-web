@@ -79,20 +79,27 @@ export default function Home() {
             <ul className="mt-4 space-y-3 sm:space-y-4">
               {site.awards.items.map((item) => (
                 <li
-                  key={`${item.year}-${item.award}`}
+                  key={`${item.year}-${item.event}-${item.result}`}
                   className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5"
                 >
-                  <p className="text-xs font-semibold tracking-wide text-zinc-500">
-                    {item.year}
-                  </p>
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <p className="text-xs font-semibold tracking-wide text-zinc-500">
+                      {item.year}
+                    </p>
+                    <p className="text-xs font-semibold text-zinc-700">
+                      {item.result}
+                    </p>
+                  </div>
+
                   <p className="mt-1 text-base font-semibold leading-7 break-keep text-zinc-950 sm:text-lg">
-                    {item.award}
+                    {item.event}
                   </p>
+
                   <p className="mt-1 text-sm leading-6 break-keep text-zinc-700 sm:text-[15px]">
-                    {item.category}
+                    {item.venue}
                   </p>
                   <p className="mt-1 text-sm leading-6 break-keep text-zinc-600 sm:text-[15px]">
-                    {item.work}
+                    {item.piece}
                   </p>
                 </li>
               ))}
