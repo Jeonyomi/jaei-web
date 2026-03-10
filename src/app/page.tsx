@@ -62,6 +62,36 @@ export default function Home() {
           </div>
         </Section>
 
+        <Section id="updates" title={site.updates.title}>
+          <div className="rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6">
+            <p className="mb-5 text-sm text-zinc-600">{site.updates.note}</p>
+            <ul className="space-y-4">
+              {site.updates.items.map((item) => (
+                <li
+                  key={`${item.date}-${item.source}-${item.title}`}
+                  className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5"
+                >
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-xs font-medium tracking-wide text-zinc-500">
+                      {item.date} · {item.source}
+                    </p>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:decoration-zinc-700"
+                    >
+                      기사 보기
+                    </a>
+                  </div>
+                  <h3 className="mt-2 text-base font-semibold text-zinc-950 sm:text-lg">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-7 break-keep text-zinc-700">{item.summary}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Section>
+
         <Section id="venue" title={site.venue.title}>
           <VenuePanel />
         </Section>

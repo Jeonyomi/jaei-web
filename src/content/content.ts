@@ -7,6 +7,7 @@ export const site = {
     { label: "작품 소개", href: "#about" },
     { label: "공연 정보", href: "#performance" },
     { label: "예매 안내", href: "#tickets" },
+    { label: "최근 소식", href: "#updates" },
     { label: "공연장", href: "#venue" },
     { label: "갤러리", href: "#gallery" },
     { label: "수상·활동", href: "#awards" },
@@ -77,6 +78,42 @@ export const site = {
       "좌석/캐스팅/일정은 제작사 및 극장 사정에 따라 변경될 수 있습니다.",
       "공식 예매 공지와 예매처 안내를 최우선으로 확인해주세요.",
     ],
+  },
+  updates: {
+    title: "최근 소식",
+    note: "작품 관련 공식·언론 업데이트를 시간순으로 모아둔 섹션입니다.",
+    items: [
+      {
+        date: "2026.03.10",
+        source: "연합뉴스",
+        title: "‘빌리 엘리어트’ 쇼앤텔 현장 공개",
+        summary:
+          "고양아람누리 아람극장에서 쇼앤텔이 열려 출연진이 주요 장면을 시연하며 작품의 분위기와 에너지를 먼저 공개했습니다.",
+        href: "https://naver.me/GLhjfDU4",
+      },
+      {
+        date: "2026.03.10",
+        source: "데일리안",
+        title: "뮤지컬 ‘빌리 엘리어트’ 관련 언론 보도 업데이트",
+        summary:
+          "작품과 공연 시즌에 대한 언론 노출이 이어지며 관객 관심과 기대감을 높이는 보도가 추가로 공개됐습니다.",
+        href: "https://naver.me/GSQZwiWz",
+      },
+      {
+        date: "2026.02.10",
+        source: "뉴데일리",
+        title: "전체 상견례 및 연습 돌입 소식",
+        summary:
+          "전체 상견례와 함께 본격적인 연습이 시작됐고, 작품의 메시지와 공동체적 에너지를 강조한 현장 분위기가 전해졌습니다.",
+        href: "https://www.newdaily.co.kr/site/data/html/2026/02/10/2026021000060.html",
+      },
+    ] as {
+      date: string;
+      source: string;
+      title: string;
+      summary: string;
+      href: string;
+    }[],
   },
   venue: {
     title: "공연장 & 오시는 길",
