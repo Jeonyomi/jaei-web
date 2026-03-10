@@ -72,34 +72,22 @@ export default function Home() {
 
         <Section id="awards" title={site.awards.title}>
           <div className="rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6">
-            <p className="text-sm leading-7 break-keep text-zinc-600 sm:text-[15px]">
-              {site.awards.note}
-            </p>
-
-            <ul className="mt-4 space-y-3 sm:space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               {site.awards.items.map((item) => (
                 <li
                   key={`${item.year}-${item.event}-${item.result}`}
                   className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5"
                 >
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                    <p className="text-xs font-semibold tracking-wide text-zinc-500">
-                      {item.year}
-                    </p>
-                    <p className="text-xs font-semibold text-zinc-700">
-                      {item.result}
-                    </p>
-                  </div>
-
-                  <p className="mt-1 text-base font-semibold leading-7 break-keep text-zinc-950 sm:text-lg">
-                    {item.event}
-                  </p>
-
-                  <p className="mt-1 text-sm leading-6 break-keep text-zinc-700 sm:text-[15px]">
-                    {item.venue}
-                  </p>
-                  <p className="mt-1 text-sm leading-6 break-keep text-zinc-600 sm:text-[15px]">
-                    {item.piece}
+                  <p className="text-sm leading-7 break-keep text-zinc-800 sm:text-[15px]">
+                    <span className="font-semibold text-zinc-950">{item.year}</span>
+                    <span className="text-zinc-400"> · </span>
+                    <span className="font-semibold text-zinc-950">{item.event}</span>
+                    <span className="text-zinc-400"> · </span>
+                    <span>{item.venue}</span>
+                    <span className="text-zinc-400"> · </span>
+                    <span className="text-zinc-700">{item.piece}</span>
+                    <span className="text-zinc-400"> · </span>
+                    <span className="font-semibold text-zinc-700">{item.result}</span>
                   </p>
                 </li>
               ))}
