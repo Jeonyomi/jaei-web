@@ -84,6 +84,14 @@ export const site = {
     note: "작품 관련 공식·언론 업데이트를 시간순으로 모아둔 섹션입니다.",
     items: [
       {
+        date: "2026.03.26",
+        source: "신시컴퍼니 블로그",
+        title: "[빌Real] Ep8: 왓츠 인 마이 백 2화 공개",
+        summary:
+          "출연진의 가방과 애정 어린 소지품을 소개하는 비하인드 콘텐츠로, 배우들의 각기 다른 매력과 소중한 아이템을 보여줬습니다.",
+        href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224230054088&navType=by",
+      },
+      {
         date: "2026.03.10",
         source: "연합뉴스",
         title: "‘빌리 엘리어트’ 쇼앤텔 현장 공개",
