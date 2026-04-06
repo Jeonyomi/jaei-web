@@ -84,6 +84,14 @@ export const site = {
     note: "작품 관련 공식·언론 업데이트를 시간순으로 모아둔 섹션입니다.",
     items: [
       {
+        date: "2026.04.06",
+        source: "YouTube",
+        title: "2026 영재발굴단 인피니티 영상 공개",
+        summary:
+          "유튜브 콘텐츠를 통해 2026 영재발굴단 인피니티와 뮤지컬 빌리 엘리어트 차세대 주인공 4인방이 공개되었습니다.",
+        href: "https://www.youtube.com/watch?v=4eQ0dpWhT9o",
+      },
+      {
         date: "2026.03.26",
         source: "신시컴퍼니 블로그",
         title: "[빌Real] Ep8: 왓츠 인 마이 백 2화 공개",
