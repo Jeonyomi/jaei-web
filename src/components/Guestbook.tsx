@@ -3,6 +3,12 @@
 import { useState } from "react";
 import { site } from "@/content/content";
 
+type GuestbookApiResponse = {
+  ok?: boolean;
+  error?: string;
+  retryable?: boolean;
+};
+
 export function Guestbook() {
   const [name, setName] = useState("");
   const [msg, setMsg] = useState("");
@@ -21,8 +27,11 @@ export function Guestbook() {
         body: JSON.stringify({ name, message: msg }),
       });
 
-      const json = await res.json().catch(() => null);
+      const json = (await res.json().catch(() => null)) as GuestbookApiResponse | null;
       if (!res.ok || !json?.ok) {
+        if (json?.retryable) {
+          throw new Error(json.error || "방명록 저장이 잠시 지연되고 있어요. 잠시 후 다시 시도해 주세요.");
+        }
         throw new Error(json?.error || `HTTP ${res.status}`);
       }
 
@@ -30,7 +39,12 @@ export function Guestbook() {
       setName("");
       setMsg("");
     } catch (err) {
-      setSent(`저장 실패: ${(err as Error).message}`);
+      const message = (err as Error).message;
+      if (message.includes("잠시") || message.includes("지연")) {
+        setSent(message);
+      } else {
+        setSent(`저장 실패: ${message}`);
+      }
     } finally {
       setSending(false);
       setTimeout(() => setSent(null), 3500);

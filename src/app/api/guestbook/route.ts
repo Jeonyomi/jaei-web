@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabaseServer";
+import {
+  GUESTBOOK_TEMPORARY_ERROR_MESSAGE,
+  isLikelyTransientSupabaseError,
+  retrySupabaseOperation,
+} from "@/lib/supabaseResilience";
 
 const TABLE = "guestbook_messages";
 
@@ -39,14 +44,30 @@ export async function POST(req: Request) {
 
   const supabase = getSupabaseAdmin();
 
-  const { error } = await supabase.from(TABLE).insert({
-    name: trimmedName,
-    message: trimmedMessage,
-    // created_at handled by DB default
-  });
+  try {
+    await retrySupabaseOperation(async () => {
+      const { error } = await supabase.from(TABLE).insert({
+        name: trimmedName,
+        message: trimmedMessage,
+        // created_at handled by DB default
+      });
 
-  if (error) {
-    return jsonError(error.message, 500);
+      if (error) {
+        throw error;
+      }
+    });
+  } catch (error) {
+    if (isLikelyTransientSupabaseError(error)) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: GUESTBOOK_TEMPORARY_ERROR_MESSAGE,
+          retryable: true,
+        },
+        { status: 503 }
+      );
+    }
+    return jsonError("방명록 저장 중 오류가 발생했습니다. 다시 시도해 주세요.", 500);
   }
 
   return NextResponse.json({ ok: true });
@@ -77,7 +98,17 @@ export async function GET(req: Request) {
     .limit(limit);
 
   if (error) {
-    return jsonError(error.message, 500);
+    if (isLikelyTransientSupabaseError(error)) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "Supabase is temporarily unavailable or waking up. Please retry shortly.",
+          retryable: true,
+        },
+        { status: 503 }
+      );
+    }
+    return jsonError("Failed to load guestbook messages", 500);
   }
 
   return NextResponse.json({ ok: true, data });
