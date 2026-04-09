@@ -84,6 +84,14 @@ export const site = {
     note: "작품 관련 공식·언론 업데이트를 시간순으로 모아둔 섹션입니다.",
     items: [
       {
+        date: "2026.04.09",
+        source: "신시컴퍼니 블로그",
+        title: "[빌Real] Ep9: 빌리 엘리어트 쇼앤텔 비하인드 공개",
+        summary:
+          "쇼앤텔 현장의 무대 시연과 질의응답, 그리고 배우들의 연습실 분위기를 담은 비하인드 콘텐츠가 공개되었습니다.",
+        href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224246675719&navType=by",
+      },
+      {
         date: "2026.04.06",
         source: "YouTube",
         title: "2026 영재발굴단 인피니티 영상 공개",
