@@ -163,9 +163,14 @@ export const site = {
   },
   gallery: {
     title: "포토 & 영상",
-    note: "준비 중입니다. 공연이 시작되면 리허설/공연 사진과 영상 클립을 업데이트할 예정입니다.",
+    note: "공연 현장과 무대 사진을 갤러리에 반영했습니다. 공식 영상은 플레이리스트와 제작사 채널을 함께 확인해주세요.",
     // Local images placed under /public/gallery
     images: [
+      { src: "/gallery/performance-2026-01.jpg", alt: "재이 공연 현장 사진 1" },
+      { src: "/gallery/performance-2026-02.jpg", alt: "재이 공연 현장 사진 2" },
+      { src: "/gallery/performance-2026-03.jpg", alt: "재이 공연 현장 사진 3" },
+      { src: "/gallery/performance-2026-04.jpg", alt: "재이 공연 현장 사진 4" },
+      { src: "/gallery/performance-2026-05.jpg", alt: "재이 공연 현장 사진 5" },
       { src: "/gallery/1.jpg", alt: "재이 프로필 사진 1" },
       { src: "/gallery/2.jpg", alt: "재이 프로필 사진 2" },
       { src: "/gallery/1710929579724.jpg", alt: "재이 프로필 사진 3" },
