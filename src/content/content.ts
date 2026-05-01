@@ -166,6 +166,7 @@ export const site = {
     note: "공연 현장과 무대 사진을 갤러리에 반영했습니다. 공식 영상은 플레이리스트와 제작사 채널을 함께 확인해주세요.",
     // Local images placed under /public/gallery
     images: [
+      { src: "/gallery/performance-2026-clip-01.mp4", alt: "재이 공연 현장 영상 1", type: "video" },
       { src: "/gallery/performance-2026-01.jpg", alt: "재이 공연 현장 사진 1" },
       { src: "/gallery/performance-2026-02.jpg", alt: "재이 공연 현장 사진 2" },
       { src: "/gallery/performance-2026-03.jpg", alt: "재이 공연 현장 사진 3" },

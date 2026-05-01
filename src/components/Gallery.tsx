@@ -51,14 +51,25 @@ export function Gallery() {
               className="group relative w-[62%] shrink-0 overflow-hidden rounded-xl border border-zinc-200 bg-white sm:w-[30%]"
               style={{ scrollSnapAlign: "start" }}
             >
-              <div className="relative aspect-[3/4]">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 640px) 70vw, 30vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                />
+              <div className="relative aspect-[3/4] bg-black">
+                {img.type === "video" ? (
+                  <video
+                    src={img.src}
+                    controls
+                    preload="metadata"
+                    playsInline
+                    className="h-full w-full object-cover"
+                    aria-label={img.alt}
+                  />
+                ) : (
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 640px) 70vw, 30vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                )}
               </div>
             </div>
           ))}
