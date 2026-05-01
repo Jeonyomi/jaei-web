@@ -174,6 +174,7 @@ export const site = {
       { src: "/gallery/performance-2026-05.jpg", alt: "재이 공연 현장 사진 5" },
       { src: "/gallery/performance-2026-06.jpg", alt: "재이 공연 현장 사진 6" },
       { src: "/gallery/performance-2026-07.jpg", alt: "재이 공연 현장 사진 7" },
+      { src: "/gallery/performance-2026-08.jpg", alt: "재이 공연 현장 사진 8" },
       { src: "/gallery/1.jpg", alt: "재이 프로필 사진 1" },
       { src: "/gallery/2.jpg", alt: "재이 프로필 사진 2" },
       { src: "/gallery/1710929579724.jpg", alt: "재이 프로필 사진 3" },
