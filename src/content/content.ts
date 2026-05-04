@@ -181,7 +181,6 @@ export const site = {
       { src: "/gallery/1710929579918.jpg", alt: "재이 프로필 사진 4" },
       { src: "/gallery/1710929580039.jpg", alt: "재이 프로필 사진 5" },
       { src: "/gallery/1713445456628(1).jpg", alt: "재이 프로필 사진 6" },
-      { src: "/gallery/showcase-2026-01.jpg", alt: "재이 공연 소개 이미지 1" },
       { src: "/gallery/portrait-2026-01.jpg", alt: "재이 프로필 사진 7" },
       { src: "/gallery/portrait-2026-02.jpg", alt: "재이 프로필 사진 8" },
     ],
