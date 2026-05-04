@@ -24,9 +24,10 @@ function getIcon(href: string) {
 
 export function OfficialLinks() {
   return (
-    <div className="rounded-xl border border-zinc-200 bg-white p-5">
-      <p className="text-sm font-semibold text-zinc-950">공식 채널</p>
-      <ul className="mt-3 space-y-2">
+    <div className="surface-card p-5">
+      <p className="section-kicker">Official</p>
+      <p className="mt-2 text-sm font-semibold tracking-[-0.02em] text-zinc-950">공식 채널</p>
+      <ul className="mt-4 space-y-2">
         {officialLinks.map((l) => {
           const Icon = getIcon(l.href);
           return (
@@ -35,9 +36,9 @@ export function OfficialLinks() {
                 href={l.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-zinc-900 hover:underline hover:decoration-zinc-400 hover:underline-offset-4"
+                className="inline-flex items-center gap-2 text-zinc-900 transition-colors hover:text-blue-600"
               >
-                <Icon className="h-4 w-4 text-zinc-600" />
+                <Icon className="h-4 w-4 text-zinc-500" />
                 <span>{l.label}</span>
               </a>
             </li>

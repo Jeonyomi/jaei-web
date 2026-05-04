@@ -14,7 +14,7 @@ import { VenuePanel } from "@/components/VenuePanel";
 
 export default function Home() {
   return (
-    <div className="min-h-dvh bg-zinc-50 text-zinc-950">
+    <div className="min-h-dvh bg-transparent text-zinc-950">
       <BgmPlayer />
       <Header />
       <Hero />
@@ -23,30 +23,27 @@ export default function Home() {
       <main>
         <Section id="performance" title={site.performance.title}>
           <InfoTable rows={site.performance.rows} />
-          <p className="mt-4 text-xs text-zinc-500">
-            출처: 신시컴퍼니 공지(프리뷰/1차 티켓 오픈 안내)
-          </p>
+          <p className="mt-4 text-xs text-zinc-500">출처: 신시컴퍼니 공지(프리뷰/1차 티켓 오픈 안내)</p>
         </Section>
 
         <Section id="about" title={site.about.title}>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div className="rounded-xl border border-zinc-200 bg-white p-5">
+            <div className="surface-card p-5">
               <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-700">
                 {site.about.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-5">
-              <p className="text-sm font-semibold text-zinc-950">크레딧(요약)</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+            <div className="surface-card p-5">
+              <p className="section-kicker">Credits</p>
+              <p className="mt-2 text-sm font-semibold text-zinc-950">크레딧(요약)</p>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-zinc-700">
                 {site.about.credits.map((c) => (
                   <li key={c}>{c}</li>
                 ))}
               </ul>
-              <p className="mt-4 text-xs text-zinc-500">
-                ※ 위 내용은 제작사 소개 문구를 바탕으로 요약했습니다.
-              </p>
+              <p className="mt-4 text-xs text-zinc-500">※ 위 내용은 제작사 소개 문구를 바탕으로 요약했습니다.</p>
             </div>
           </div>
         </Section>
@@ -63,18 +60,13 @@ export default function Home() {
         </Section>
 
         <Section id="updates" title={site.updates.title}>
-          <div className="rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6">
+          <div className="surface-card p-4 sm:p-6">
             <p className="mb-5 text-sm text-zinc-600">{site.updates.note}</p>
             <ul className="space-y-4">
               {site.updates.items.map((item) => (
-                <li
-                  key={`${item.date}-${item.source}-${item.title}`}
-                  className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5"
-                >
+                <li key={`${item.date}-${item.source}-${item.title}`} className="surface-tint p-4 sm:p-5">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-xs font-medium tracking-wide text-zinc-500">
-                      {item.date} · {item.source}
-                    </p>
+                    <p className="section-kicker !text-[11px]">{item.date} · {item.source}</p>
                     <a
                       href={item.href}
                       target="_blank"
@@ -84,8 +76,8 @@ export default function Home() {
                       기사 보기
                     </a>
                   </div>
-                  <h3 className="mt-2 text-base font-semibold text-zinc-950 sm:text-lg">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-7 break-keep text-zinc-700">{item.summary}</p>
+                  <h3 className="mt-2 text-base font-semibold tracking-[-0.02em] text-zinc-950 sm:text-lg">{item.title}</h3>
+                  <p className="mt-2 break-keep text-sm leading-7 text-zinc-700">{item.summary}</p>
                 </li>
               ))}
             </ul>
@@ -101,14 +93,11 @@ export default function Home() {
         </Section>
 
         <Section id="awards" title={site.awards.title}>
-          <div className="rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6">
+          <div className="surface-card p-4 sm:p-6">
             <ul className="space-y-3 sm:space-y-4">
               {site.awards.items.map((item) => (
-                <li
-                  key={`${item.year}-${item.event}-${item.result}`}
-                  className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5"
-                >
-                  <p className="text-sm leading-7 break-keep text-zinc-800 sm:text-[15px]">
+                <li key={`${item.year}-${item.event}-${item.result}`} className="surface-tint p-4 sm:p-5">
+                  <p className="break-keep text-sm leading-7 text-zinc-800 sm:text-[15px]">
                     <span className="font-semibold text-zinc-950">{item.year}</span>
                     <span className="text-zinc-400"> · </span>
                     <span className="font-semibold text-zinc-950">{item.event}</span>

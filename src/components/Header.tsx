@@ -21,11 +21,11 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-black/8 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-3 px-5 py-3">
         <Link
           href="#top"
-          className="font-semibold tracking-tight text-zinc-950"
+          className="text-sm font-semibold tracking-[-0.02em] text-zinc-950"
           aria-label={`${site.title} 홈으로`}
           onClick={() => setOpen(false)}
         >
@@ -34,11 +34,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="메인 메뉴">
           {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-zinc-600 hover:text-zinc-950"
-            >
+            <a key={item.href} href={item.href} className="text-sm text-zinc-600 transition-colors hover:text-zinc-950">
               {item.label}
             </a>
           ))}
@@ -46,7 +42,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md border border-zinc-200 px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50 md:hidden"
+          className="button-secondary !px-3 !py-2 md:hidden"
           aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -55,16 +51,15 @@ export function Header() {
         </button>
       </div>
 
-      <div className={cx("md:hidden", open && "border-t border-zinc-200/70")}
-      >
+      <div className={cx("md:hidden", open && "border-t border-black/8")}>
         {open ? (
           <nav className="mx-auto w-full max-w-5xl px-5 py-3" aria-label="모바일 메뉴">
-            <ul className="flex flex-col gap-2">
+            <ul className="surface-card flex flex-col gap-1 p-2">
               {nav.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="block rounded-md px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50"
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-50"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}

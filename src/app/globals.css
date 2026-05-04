@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #09090b;
+  --background: #ffffff;
+  --foreground: #171717;
+  --muted: #4d4d4d;
+  --line: #ebebeb;
+  --card-shadow:
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.04) 0px 2px 2px,
+    #fafafa 0px 0px 0px 1px;
+  --card-shadow-strong:
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.04) 0px 2px 2px,
+    rgba(0, 0, 0, 0.04) 0px 8px 8px -8px,
+    #fafafa 0px 0px 0px 1px;
 }
 
 @theme inline {
@@ -17,12 +28,93 @@ html {
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(0, 112, 243, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
   color: var(--foreground);
+  font-feature-settings: "liga" 1;
 }
 
-/* Better focus visibility */
+::selection {
+  background: rgba(0, 114, 245, 0.14);
+}
+
 :focus-visible {
-  outline: 2px solid rgba(9, 9, 11, 0.25);
+  outline: 2px solid hsla(212, 100%, 48%, 1);
   outline-offset: 2px;
+}
+
+.surface-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+.surface-card-strong {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow-strong);
+}
+
+.surface-tint {
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: #ebf5ff;
+  color: #0068d6;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #171717;
+  color: #ffffff;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 160ms ease;
+}
+
+.button-primary:hover {
+  background: #2a2a2a;
+}
+
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #171717;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.button-secondary:hover {
+  background: #fafafa;
+}
+
+.section-kicker {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666666;
 }

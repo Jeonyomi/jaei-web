@@ -8,6 +8,11 @@ import {
 
 const TABLE = "guestbook_messages";
 
+type GuestbookPayload = {
+  name?: unknown;
+  message?: unknown;
+};
+
 function jsonError(message: string, status: number) {
   return NextResponse.json({ ok: false, error: message }, { status });
 }
@@ -20,8 +25,7 @@ export async function POST(req: Request) {
     return jsonError("Invalid JSON", 400);
   }
 
-  const name = (body as any)?.name;
-  const message = (body as any)?.message;
+  const { name, message } = (body ?? {}) as GuestbookPayload;
 
   if (typeof name !== "string" || typeof message !== "string") {
     return jsonError("Invalid payload", 400);
@@ -37,7 +41,6 @@ export async function POST(req: Request) {
     return jsonError("Message must be 1~200 chars", 400);
   }
 
-  // Basic anti-abuse: deny obvious links (can be relaxed later)
   if (/https?:\/\//i.test(trimmedMessage)) {
     return jsonError("Links are not allowed", 400);
   }
@@ -49,7 +52,6 @@ export async function POST(req: Request) {
       const { error } = await supabase.from(TABLE).insert({
         name: trimmedName,
         message: trimmedMessage,
-        // created_at handled by DB default
       });
 
       if (error) {
@@ -85,10 +87,7 @@ export async function GET(req: Request) {
   }
 
   const url = new URL(req.url);
-  const limit = Math.min(
-    200,
-    Math.max(1, Number(url.searchParams.get("limit") || "50"))
-  );
+  const limit = Math.min(200, Math.max(1, Number(url.searchParams.get("limit") || "50")));
 
   const supabase = getSupabaseAdmin();
   const { data, error } = await supabase
