@@ -1,120 +1,47 @@
-import { site } from "@/content/content";
+import { BgmPlayer } from "@/components/BgmPlayer";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Guestbook } from "@/components/Guestbook";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Highlights } from "@/components/Highlights";
-import { InfoTable } from "@/components/InfoTable";
-import { OfficialLinks } from "@/components/OfficialLinks";
+import { Journey } from "@/components/Journey";
+import { ProfileIntro } from "@/components/ProfileIntro";
+import { RecentActivity } from "@/components/RecentActivity";
 import { Section } from "@/components/Section";
-import { BgmPlayer } from "@/components/BgmPlayer";
-import { TicketPanel } from "@/components/TicketPanel";
-import { VenuePanel } from "@/components/VenuePanel";
+import { Stories } from "@/components/Stories";
+import { site } from "@/content/content";
 
 export default function Home() {
   return (
-    <div className="min-h-dvh bg-transparent text-zinc-950">
-      <BgmPlayer />
+    <div className="min-h-dvh bg-[var(--paper)] text-[var(--ink)]">
+      <BgmPlayer title="Jae-i on Stage BGM" />
       <Header />
       <Hero />
       <Highlights />
 
       <main>
-        <Section id="performance" title={site.performance.title}>
-          <InfoTable rows={site.performance.rows} />
-          <p className="mt-4 text-xs text-zinc-500">출처: 신시컴퍼니 공지(프리뷰/1차 티켓 오픈 안내)</p>
+        <Section id="about" title={site.profile.title} eyebrow="01 · ABOUT">
+          <ProfileIntro />
         </Section>
 
-        <Section id="about" title={site.about.title}>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div className="surface-card p-5">
-              <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-700">
-                {site.about.bullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="surface-card p-5">
-              <p className="section-kicker">Credits</p>
-              <p className="mt-2 text-sm font-semibold text-zinc-950">크레딧(요약)</p>
-              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-zinc-700">
-                {site.about.credits.map((c) => (
-                  <li key={c}>{c}</li>
-                ))}
-              </ul>
-              <p className="mt-4 text-xs text-zinc-500">※ 위 내용은 제작사 소개 문구를 바탕으로 요약했습니다.</p>
-            </div>
-          </div>
+        <Section id="activities" title="최근 활동" eyebrow="02 · RECENT" tone="soft">
+          <RecentActivity />
         </Section>
 
-        <Section id="tickets" title={site.tickets.title}>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            <div className="md:col-span-2">
-              <TicketPanel />
-            </div>
-            <div className="md:col-span-1">
-              <OfficialLinks />
-            </div>
-          </div>
+        <Section id="journey" title={site.journey.title} eyebrow="03 · JOURNEY">
+          <Journey />
         </Section>
 
-        <Section id="updates" title={site.updates.title}>
-          <div className="surface-card p-4 sm:p-6">
-            <p className="mb-5 text-sm text-zinc-600">{site.updates.note}</p>
-            <ul className="space-y-4">
-              {site.updates.items.map((item) => (
-                <li key={`${item.date}-${item.source}-${item.title}`} className="surface-tint p-4 sm:p-5">
-                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="section-kicker !text-[11px]">{item.date} · {item.source}</p>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:decoration-zinc-700"
-                    >
-                      기사 보기
-                    </a>
-                  </div>
-                  <h3 className="mt-2 text-base font-semibold tracking-[-0.02em] text-zinc-950 sm:text-lg">{item.title}</h3>
-                  <p className="mt-2 break-keep text-sm leading-7 text-zinc-700">{item.summary}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <Section id="stories" title={site.stories.title} eyebrow="04 · STORIES" tone="soft">
+          <Stories />
         </Section>
 
-        <Section id="venue" title={site.venue.title}>
-          <VenuePanel />
-        </Section>
-
-        <Section id="gallery" title={site.gallery.title}>
+        <Section id="gallery" title={site.gallery.title} eyebrow="05 · GALLERY">
           <Gallery />
         </Section>
 
-        <Section id="awards" title={site.awards.title}>
-          <div className="surface-card p-4 sm:p-6">
-            <ul className="space-y-3 sm:space-y-4">
-              {site.awards.items.map((item) => (
-                <li key={`${item.year}-${item.event}-${item.result}`} className="surface-tint p-4 sm:p-5">
-                  <p className="break-keep text-sm leading-7 text-zinc-800 sm:text-[15px]">
-                    <span className="font-semibold text-zinc-950">{item.year}</span>
-                    <span className="text-zinc-400"> · </span>
-                    <span className="font-semibold text-zinc-950">{item.event}</span>
-                    <span className="text-zinc-400"> · </span>
-                    <span>{item.venue}</span>
-                    <span className="text-zinc-400"> · </span>
-                    <span className="text-zinc-700">{item.piece}</span>
-                    <span className="text-zinc-400"> · </span>
-                    <span className="font-semibold text-zinc-700">{item.result}</span>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Section>
-
-        <Section id="guestbook" title={site.guestbook.title}>
+        <Section id="guestbook" title={site.guestbook.title} eyebrow="06 · CHEER" tone="soft">
           <Guestbook />
         </Section>
       </main>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Music2 } from "lucide-react";
 
 type Props = {
   src?: string;
@@ -113,11 +114,11 @@ export function BgmPlayer({ src = DEFAULT_SRC, title = "BGM" }: Props) {
             if (!open) setOpen(true);
             else void toggle();
           }}
-          className="button-secondary gap-2 shadow-[rgba(0,0,0,0.08)_0px_0px_0px_1px,rgba(0,0,0,0.04)_0px_2px_2px]"
+          className="button-secondary !h-11 !w-11 !px-0 gap-2 shadow-[rgba(0,0,0,0.08)_0px_0px_0px_1px,rgba(0,0,0,0.04)_0px_2px_2px] sm:!w-auto sm:!px-4"
           aria-label={playing ? "BGM 일시정지" : "BGM 재생"}
         >
-          <span className="inline-block h-2 w-2 rounded-full" style={{ background: playing ? "#22c55e" : "#a1a1aa" }} />
-          {ready ? (playing ? "BGM On" : "BGM Off") : "BGM"}
+          <Music2 className={`h-4 w-4 ${playing ? "text-emerald-600" : "text-zinc-500"}`} aria-hidden="true" />
+          <span className="hidden sm:inline">{ready ? (playing ? "BGM On" : "BGM Off") : "BGM"}</span>
         </button>
       </div>
     </div>

@@ -1,196 +1,126 @@
 export type NavItem = { label: string; href: string };
 
+export type JourneyItem = {
+  year: string;
+  event: string;
+  venue: string;
+  piece: string;
+  result: string;
+};
+
+export type StoryItem = {
+  featured: boolean;
+  date: string;
+  source: string;
+  title: string;
+  summary: string;
+  href: string;
+};
+
+export type ActivityItem = {
+  slug: string;
+  featured: boolean;
+  eyebrow: string;
+  title: string;
+  role: string;
+  period: string;
+  venue: string;
+  status: string;
+  summary: string;
+  mainImage: string;
+  mainImageAlt: string;
+  detailImage: string;
+  detailImageAlt: string;
+  links: Array<{ label: string; href: string }>;
+};
+
 export const site = {
   title: "Jae-i on Stage",
-  description: "재이의 뮤지컬 데뷔(킬리 깁슨 역)를 기념하는 랜딩 페이지",
+  description: "재이가 지나온 무대와 앞으로의 새로운 활동을 한 장면씩 쌓아가는 성장 아카이브",
   nav: [
-    { label: "작품 소개", href: "#about" },
-    { label: "공연 정보", href: "#performance" },
-    { label: "예매 안내", href: "#tickets" },
-    { label: "최근 소식", href: "#updates" },
-    { label: "공연장", href: "#venue" },
+    { label: "재이 소개", href: "#about" },
+    { label: "최근 활동", href: "#activities" },
+    { label: "성장 기록", href: "#journey" },
+    { label: "소식", href: "#stories" },
     { label: "갤러리", href: "#gallery" },
-    { label: "수상·활동", href: "#awards" },
     { label: "응원", href: "#guestbook" },
   ] satisfies NavItem[],
   hero: {
-    headline: "재이의 첫 무대,\n그리고 첫 번째 도전",
-    subheadline: "무대 위에서 꿈이 현실이 되는 순간을 함께해주세요.",
-    badges: ["BILLY ELLIOT", "MUSICAL DEBUT", "KILLY GIBSON", "2026 SEASON"],
+    eyebrow: "JAE-I · ACTIVITY ARCHIVE",
+    headline: "재이의 무대는\n계속됩니다.",
+    subheadline:
+      "춤과 노래, 연기로 만나 온 순간들. 지나온 활동을 기록하고 앞으로의 새로운 무대를 한 장면씩 쌓아갑니다.",
+    image: "/gallery/portrait-2026-02.jpg",
+    imageAlt: "재이의 흑백 프로필 사진",
     ctas: [
-      { label: "공연 정보 보기", href: "#performance", variant: "primary" as const },
-      { label: "응원 메시지 남기기", href: "#guestbook", variant: "secondary" as const },
+      { label: "최근 활동 보기", href: "#activities", variant: "primary" as const },
+      { label: "성장 기록 보기", href: "#journey", variant: "secondary" as const },
     ],
-    note: "공연 일정과 예매 정보는 제작사/극장 사정에 따라 변동될 수 있습니다.",
+    note: "공식 활동과 공개 자료를 기준으로 업데이트합니다.",
   },
   highlights: [
-    { title: "2026.04.12 – 2026.07.26", subtitle: "공연 기간", desc: "프리뷰 기간 포함" },
-    { title: "화–금 19:30 / 토·일 14:00, 19:00", subtitle: "공연 시간", desc: "월요일 공연 없음" },
-    { title: "블루스퀘어 우리은행홀", subtitle: "공연 장소", desc: "한강진역 연결(도보 이동)" },
-    { title: "175분", subtitle: "러닝타임", desc: "인터미션 20분 포함" },
+    { label: "ARCHIVE", value: "2020 → NOW", note: "무대와 성장의 기록" },
+    { label: "MUSICAL DEBUT", value: "2026", note: "〈빌리 엘리어트〉" },
+    { label: "ON STAGE", value: "Musical · Dance", note: "노래 · 연기 · 퍼포먼스" },
   ],
-  performance: {
-    title: "공연 정보",
-    rows: [
-      ["공연명", "뮤지컬 〈빌리 엘리어트〉"],
-      ["공연 기간", "2026년 4월 12일(일) – 7월 26일(일)"],
-      ["프리뷰", "4월 12일(일) 19:00 – 4월 19일(일) 14:00"],
-      ["공연 시간", "화–금 19:30 / 토·일 14:00, 19:00 (월 공연 없음)"],
-      ["공연 장소", "블루스퀘어 우리은행홀"],
-      ["티켓 가격", "VIP 170,000원 / R 140,000원 / S 120,000원 / A 80,000원"],
-      ["러닝타임", "175분 (인터미션 20분 포함)"],
-      ["관람 연령", "8세 이상(2019년 출생자까지)"],
-    ] as [string, string][],
+  profile: {
+    eyebrow: "ABOUT JAE-I",
+    title: "무대 위에서 자라는 재이",
+    lead:
+      "재이는 무용, 뮤지컬, 방송과 다양한 공연을 경험하며 자신만의 표현을 넓혀가고 있습니다.",
+    body:
+      "이곳은 하나의 작품을 소개하는 페이지가 아니라, 재이가 지나온 무대와 앞으로 만날 새로운 활동을 차곡차곡 기록하는 개인 아카이브입니다.",
+    focus: ["Musical", "Dance", "Stage Performance"],
+    image: "/gallery/portrait-2026-01.jpg",
+    imageAlt: "재이의 밝은 프로필 사진",
+    instagram: {
+      label: "Instagram @j_on_stage",
+      href: "https://www.instagram.com/j_on_stage/",
+    },
+    nextStage: {
+      eyebrow: "NEXT CHAPTER",
+      title: "다음 무대를 기다리는 중",
+      body: "새로운 활동과 공식 일정이 확인되면 이곳에 가장 최근 기록으로 차례로 업데이트합니다.",
+    },
   },
-  about: {
-    title: "작품 소개",
-    bullets: [
-      "1980년대 영국 북부 탄광촌을 배경으로, 복싱을 배우던 소년 ‘빌리’가 우연히 발레를 접하며 자신의 재능과 꿈을 발견합니다.",
-      "편견과 현실의 벽을 넘어 꿈을 향해 나아가는 여정이 음악과 춤, 그리고 따뜻한 서사로 펼쳐지는 작품입니다.",
-    ],
-    credits: [
-      "음악: 엘튼 존",
-      "연출: 스티븐 달드리",
-      "극본: 리 홀",
-    ],
-  },
-  tickets: {
-    title: "예매 안내",
-    cards: [
-      {
-        title: "프리뷰 티켓 오픈(안내)",
-        desc: "1/29 선오픈 및 일반 오픈 안내(플랫폼/시간은 공지 기준)",
-        ctaLabel: "프리뷰 공지 보기",
-        ctaHref: "https://www.iseensee.com/Home/Community/Notice.aspx?IdArticle=11922&bbsPage=1&mode=v&tab=3",
-      },
-      {
-        title: "1차 티켓 오픈(안내)",
-        desc: "2/10 선오픈(13:00) 및 일반 오픈(14:00), 오픈 대상 기간 안내",
-        ctaLabel: "1차 오픈 공지 보기",
-        ctaHref: "https://www.iseensee.com/Home/Community/Notice.aspx?IdArticle=11924&bbsPage=62&mode=v&tab=3",
-      },
-    ],
-    discounts: [
-      { label: "프리뷰 할인", value: "30%" },
-      { label: "1차 조기예매 할인", value: "20%" },
-    ],
-    notes: [
-      "좌석/캐스팅/일정은 제작사 및 극장 사정에 따라 변경될 수 있습니다.",
-      "공식 예매 공지와 예매처 안내를 최우선으로 확인해주세요.",
-    ],
-  },
-  updates: {
-    title: "최근 소식",
-    note: "작품 관련 공식·언론 업데이트를 시간순으로 모아둔 섹션입니다.",
-    items: [
-      {
-        date: "2026.04.23",
-        source: "신시컴퍼니 블로그",
-        title: "[빌Real] Ep10: 〈빌리 엘리어트〉 비하인드 공개",
-        summary:
-          "신시컴퍼니 블로그를 통해 뮤지컬 〈빌리 엘리어트〉 관련 비하인드 콘텐츠 Ep10이 공개되었습니다. 현장 분위기와 작품 준비 과정을 엿볼 수 있는 최신 업데이트입니다.",
-        href: "https://blog.naver.com/seenseecom/224262656258",
-      },
-      {
-        date: "2026.04.09",
-        source: "신시컴퍼니 블로그",
-        title: "[빌Real] Ep9: 빌리 엘리어트 쇼앤텔 비하인드 공개",
-        summary:
-          "쇼앤텔 현장의 무대 시연과 질의응답, 그리고 배우들의 연습실 분위기를 담은 비하인드 콘텐츠가 공개되었습니다.",
-        href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224246675719&navType=by",
-      },
-      {
-        date: "2026.04.06",
-        source: "YouTube",
-        title: "2026 영재발굴단 인피니티 영상 공개",
-        summary:
-          "유튜브 콘텐츠를 통해 2026 영재발굴단 인피니티와 뮤지컬 빌리 엘리어트 차세대 주인공 4인방이 공개되었습니다.",
-        href: "https://www.youtube.com/watch?v=4eQ0dpWhT9o",
-      },
-      {
-        date: "2026.03.26",
-        source: "신시컴퍼니 블로그",
-        title: "[빌Real] Ep8: 왓츠 인 마이 백 2화 공개",
-        summary:
-          "출연진의 가방과 애정 어린 소지품을 소개하는 비하인드 콘텐츠로, 배우들의 각기 다른 매력과 소중한 아이템을 보여줬습니다.",
-        href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224230054088&navType=by",
-      },
-      {
-        date: "2026.03.10",
-        source: "연합뉴스",
-        title: "‘빌리 엘리어트’ 쇼앤텔 현장 공개",
-        summary:
-          "고양아람누리 아람극장에서 쇼앤텔이 열려 출연진이 주요 장면을 시연하며 작품의 분위기와 에너지를 먼저 공개했습니다.",
-        href: "https://naver.me/GLhjfDU4",
-      },
-      {
-        date: "2026.03.10",
-        source: "데일리안",
-        title: "뮤지컬 ‘빌리 엘리어트’ 쇼앤텔(Show & Tell)",
-        summary:
-          "뮤지컬 ‘빌리 엘리어트’ 쇼앤텔(Show & Tell)이 10일 오후 고양 아람누리 아람극장에서 열렸다.",
-        href: "https://naver.me/GSQZwiWz",
-      },
-      {
-        date: "2026.02.10",
-        source: "뉴데일리",
-        title: "전체 상견례 및 연습 돌입 소식",
-        summary:
-          "전체 상견례와 함께 본격적인 연습이 시작됐고, 작품의 메시지와 공동체적 에너지를 강조한 현장 분위기가 전해졌습니다.",
-        href: "https://www.newdaily.co.kr/site/data/html/2026/02/10/2026021000060.html",
-      },
-    ] as {
-      date: string;
-      source: string;
-      title: string;
-      summary: string;
-      href: string;
-    }[],
-  },
-  venue: {
-    title: "공연장 & 오시는 길",
-    name: "블루스퀘어 우리은행홀",
-    address: "서울특별시 용산구 이태원로 294",
-    subway: "6호선 한강진역(역 연결 통로)",
-    seat: "우리은행홀 1,766석",
-    mapQuery: "블루스퀘어 우리은행홀",
-    ctas: [
-      {
-        label: "블루스퀘어 오시는 길",
-        href: "https://www.bluesquare.kr/pages/cs/contact.php",
-      },
-    ],
-  },
-  gallery: {
-    title: "포토 & 영상",
-    note: "공연 현장과 무대 사진을 갤러리에 반영했습니다. 공식 영상은 플레이리스트와 제작사 채널을 함께 확인해주세요.",
-    // Local images placed under /public/gallery
-    images: [
-      { src: "/gallery/performance-2026-clip-01.mp4", alt: "재이 공연 현장 영상 1", type: "video" },
-      { src: "/gallery/performance-2026-01.jpg", alt: "재이 공연 현장 사진 1" },
-      { src: "/gallery/performance-2026-02.jpg", alt: "재이 공연 현장 사진 2" },
-      { src: "/gallery/performance-2026-03.jpg", alt: "재이 공연 현장 사진 3" },
-      { src: "/gallery/performance-2026-04.jpg", alt: "재이 공연 현장 사진 4" },
-      { src: "/gallery/performance-2026-05.jpg", alt: "재이 공연 현장 사진 5" },
-      { src: "/gallery/performance-2026-06.jpg", alt: "재이 공연 현장 사진 6" },
-      { src: "/gallery/performance-2026-07.jpg", alt: "재이 공연 현장 사진 7" },
-      { src: "/gallery/performance-2026-08.jpg", alt: "재이 공연 현장 사진 8" },
-      { src: "/gallery/1.jpg", alt: "재이 프로필 사진 1" },
-      { src: "/gallery/2.jpg", alt: "재이 프로필 사진 2" },
-      { src: "/gallery/portrait-2026-01.jpg", alt: "재이 프로필 사진 3" },
-      { src: "/gallery/portrait-2026-02.jpg", alt: "재이 프로필 사진 4" },
-    ],
-  },
-  awards: {
-    title: "수상·활동",
-    note: "주요 수상 및 활동 이력을 모아둔 섹션입니다. 공식 발표/프로그램 기준으로 업데이트됩니다.",
+  activities: [
+    {
+      slug: "billy-elliot-2026",
+      featured: true,
+      eyebrow: "RECENT ACTIVITY · 2026",
+      title: "뮤지컬 〈빌리 엘리어트〉",
+      role: "발레걸즈 · 킬리 깁슨 역",
+      period: "2026.04.12 — 07.26",
+      venue: "블루스퀘어 우리은행홀",
+      status: "공연 종료 · ARCHIVE",
+      summary:
+        "재이의 첫 뮤지컬 무대. 춤과 노래, 연기를 함께 경험한 〈빌리 엘리어트〉는 앞으로 이어질 활동 기록의 새로운 출발점으로 남았습니다.",
+      mainImage: "/gallery/performance-2026-03.jpg",
+      mainImageAlt: "뮤지컬 빌리 엘리어트 공연 장면",
+      detailImage: "/gallery/performance-2026-08.jpg",
+      detailImageAlt: "2026 뮤지컬 빌리 엘리어트 출연진 보드",
+      links: [
+        {
+          label: "공식 영상 플레이리스트",
+          href: "https://www.youtube.com/playlist?list=PLWb9aB-BHnIUdhzyzvuZh7D45cvnckTlc",
+        },
+        {
+          label: "신시컴퍼니 기록 보기",
+          href: "https://blog.naver.com/seenseecom/224262656258",
+        },
+      ],
+    },
+  ] satisfies ActivityItem[],
+  journey: {
+    title: "무대가 쌓인 시간",
+    note: "무용에서 뮤지컬, 방송과 행사 공연까지. 공개된 프로그램과 공식 기록을 기준으로 정리했습니다.",
     items: [
       {
         year: "2026",
         event: "뮤지컬 빌리 엘리어트",
         venue: "블루스퀘어 우리은행홀",
-        piece: "발레걸즈 - 킬리 깁슨 역",
-        result: "데뷔",
+        piece: "발레걸즈 · 킬리 깁슨 역",
+        result: "뮤지컬 데뷔",
       },
       {
         year: "2025",
@@ -231,8 +161,8 @@ export const site = {
         year: "2024",
         event: "Redstage",
         venue: "스타필드하남",
-        piece: "KATSEYE \"Touch\", NMIXX \"별별별(See that?)\" (K-Pop Dance)",
-        result: "공연",
+        piece: "KATSEYE \"Touch\", NMIXX \"별별별(See that?)\"",
+        result: "K-Pop Dance 공연",
       },
       {
         year: "2024",
@@ -290,20 +220,84 @@ export const site = {
         piece: "한국무용 군무",
         result: "우수상",
       },
-    ] as {
-      year: string;
-      event: string;
-      venue: string;
-      piece: string;
-      result: string;
-    }[],
+    ] satisfies JourneyItem[],
+  },
+  stories: {
+    title: "소식과 기록",
+    note: "재이의 최근 활동을 다룬 공식 콘텐츠와 언론 기록입니다.",
+    items: [
+      {
+        featured: true,
+        date: "2026.04.23",
+        source: "신시컴퍼니 블로그",
+        title: "[빌Real] Ep10: 〈빌리 엘리어트〉 비하인드 공개",
+        summary:
+          "현장 분위기와 작품 준비 과정을 담은 〈빌리 엘리어트〉 비하인드 콘텐츠가 공개됐습니다.",
+        href: "https://blog.naver.com/seenseecom/224262656258",
+      },
+      {
+        featured: false,
+        date: "2026.04.09",
+        source: "신시컴퍼니 블로그",
+        title: "[빌Real] Ep9: 쇼앤텔 비하인드 공개",
+        summary: "쇼앤텔의 무대 시연과 질의응답, 배우들의 연습실 풍경을 담은 기록입니다.",
+        href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224246675719&navType=by",
+      },
+      {
+        featured: false,
+        date: "2026.04.06",
+        source: "YouTube",
+        title: "2026 영재발굴단 인피니티 영상 공개",
+        summary: "뮤지컬 〈빌리 엘리어트〉 차세대 주인공들과 작품의 이야기를 소개합니다.",
+        href: "https://www.youtube.com/watch?v=4eQ0dpWhT9o",
+      },
+      {
+        featured: false,
+        date: "2026.03.26",
+        source: "신시컴퍼니 블로그",
+        title: "[빌Real] Ep8: 왓츠 인 마이 백 2화",
+        summary: "출연진의 애정 어린 소지품과 연습실 안팎의 모습을 만날 수 있는 비하인드 콘텐츠입니다.",
+        href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224230054088&navType=by",
+      },
+      {
+        featured: false,
+        date: "2026.03.10",
+        source: "연합뉴스",
+        title: "‘빌리 엘리어트’ 쇼앤텔 현장 공개",
+        summary: "고양아람누리 아람극장에서 열린 쇼앤텔의 주요 장면과 현장 분위기를 전했습니다.",
+        href: "https://naver.me/GLhjfDU4",
+      },
+      {
+        featured: false,
+        date: "2026.02.10",
+        source: "뉴데일리",
+        title: "전체 상견례 및 연습 돌입 소식",
+        summary: "전체 상견례와 함께 본격적인 연습이 시작된 현장 소식을 전했습니다.",
+        href: "https://www.newdaily.co.kr/site/data/html/2026/02/10/2026021000060.html",
+      },
+    ] satisfies StoryItem[],
+  },
+  gallery: {
+    title: "장면들",
+    note: "프로필, 연습과 공연의 순간을 시간에 따라 계속 더해가는 이미지 아카이브입니다.",
+    images: [
+      { src: "/gallery/portrait-2026-01.jpg", alt: "재이 프로필 사진", caption: "Portrait · 2026" },
+      { src: "/gallery/1.jpg", alt: "재이의 전신 프로필 사진", caption: "Portrait · 2026" },
+      { src: "/gallery/2.jpg", alt: "재이의 빌리 엘리어트 프로필 사진", caption: "Billy Elliot · 2026" },
+      { src: "/gallery/performance-2026-clip-01.mp4", alt: "재이 공연 현장 영상", caption: "On Stage · 2026", type: "video" },
+      { src: "/gallery/performance-2026-01.jpg", alt: "재이의 공연 준비 기록", caption: "Backstage · 2026" },
+      { src: "/gallery/performance-2026-02.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면", caption: "Billy Elliot · 2026" },
+      { src: "/gallery/performance-2026-04.jpg", alt: "뮤지컬 빌리 엘리어트 커튼콜 장면", caption: "Curtain Call · 2026" },
+      { src: "/gallery/performance-2026-06.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면", caption: "On Stage · 2026" },
+      { src: "/gallery/performance-2026-07.jpg", alt: "뮤지컬 빌리 엘리어트 활동 사진", caption: "Company · 2026" },
+    ],
   },
   guestbook: {
-    title: "응원 메시지 남기기",
-    note: "비방/개인정보/상업성 내용은 게시되지 않을 수 있습니다.",
+    title: "재이에게 응원 보내기",
+    note: "비방, 개인정보 또는 상업성 내용은 저장되지 않거나 삭제될 수 있습니다.",
   },
   footer: {
     disclaimer:
-      "이 페이지는 데뷔를 축하하기 위한 팬 페이지(비공식) 초안이며, 공연/예매 정보는 제작사 및 극장 공지를 우선으로 합니다.",
+      "재이가 지나온 무대와 성장 기록을 모으는 개인 아카이브입니다. 공연·기사 정보와 이미지 권리는 각 제작사 및 원출처를 우선합니다.",
   },
 };
