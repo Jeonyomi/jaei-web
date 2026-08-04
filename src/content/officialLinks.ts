@@ -4,7 +4,13 @@ export type OfficialLink = {
   note?: string;
 };
 
+export const jaeiInstagram: OfficialLink = {
+  label: "Instagram (전재이 · @j_on_stage)",
+  href: "https://www.instagram.com/j_on_stage/",
+};
+
 export const officialLinks: OfficialLink[] = [
+  jaeiInstagram,
   {
     label: "Instagram (신시컴퍼니 공식)",
     href: "https://www.instagram.com/i_seensee/",

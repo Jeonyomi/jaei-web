@@ -1,5 +1,8 @@
 import Image from "next/image";
+import { Instagram } from "lucide-react";
+
 import { site } from "@/content/content";
+import { jaeiInstagram } from "@/content/officialLinks";
 
 function cx(...parts: Array<string | false | null | undefined>) {
   return parts.filter(Boolean).join(" ");
@@ -9,7 +12,7 @@ export function Hero() {
   return (
     <section id="top" className="border-b border-black/8 bg-white/92">
       <div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-10 px-5 py-16 sm:py-20 md:grid-cols-[1.05fr_0.95fr] md:items-center">
-        <div className="space-y-6">
+        <div className="min-w-0 space-y-6">
           <div className="flex flex-wrap gap-2">
             {site.hero.badges.map((b) => (
               <span key={b} className="pill-badge">
@@ -26,7 +29,7 @@ export function Hero() {
             <p className="max-w-xl text-lg leading-8 text-zinc-600">{site.hero.subheadline}</p>
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {site.hero.ctas.map((c) => (
               <a
                 key={c.href}
@@ -36,6 +39,16 @@ export function Hero() {
                 {c.label}
               </a>
             ))}
+            <a
+              href={jaeiInstagram.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-secondary gap-2"
+              aria-label="전재이 인스타그램 @j_on_stage 새 창에서 열기"
+            >
+              <Instagram className="h-4 w-4" aria-hidden="true" />
+              <span>Instagram @j_on_stage</span>
+            </a>
           </div>
 
           <p className="max-w-xl text-xs text-zinc-500">{site.hero.note}</p>
