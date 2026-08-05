@@ -45,11 +45,6 @@ export function Gallery() {
                   />
                 )}
               </div>
-              {item.caption ? (
-                <figcaption className="border-b border-black/12 py-3 text-xs font-medium text-[var(--muted)]">
-                  {item.caption}
-                </figcaption>
-              ) : null}
             </figure>
           ))}
         </div>

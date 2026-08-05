@@ -64,7 +64,7 @@ Chronological records are grouped by year with border-separated rows. New featur
 
 ### Stories and gallery
 
-Stories use one featured editorial panel plus a compact source list. The gallery prioritizes Jae-i’s portraits before production imagery and shows captions only when they add context.
+Stories use one featured editorial panel plus a compact source list. The gallery prioritizes Jae-i’s portraits before production imagery and does not place decorative text or numbering around the media.
 
 ## 4. Interaction and accessibility
 
