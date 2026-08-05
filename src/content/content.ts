@@ -49,7 +49,7 @@ export const site = {
     eyebrow: "JAE-I ON STAGE",
     headline: "재이의 무대와\n활동 기록",
     subheadline:
-      "무용을 시작으로 뮤지컬과 방송, 여러 공연 무대에 참여해 온 기록을 모았습니다.",
+      "2020년부터 참여한 무용, 뮤지컬, 방송 활동을 모았습니다.",
     image: "/gallery/portrait-2026-02.jpg",
     imageAlt: "재이의 흑백 프로필 사진",
     ctas: [
@@ -65,7 +65,7 @@ export const site = {
   profile: {
     title: "전재이",
     lead:
-      "무용을 시작으로 뮤지컬과 방송, 공연 무대에 참여해 왔습니다.",
+      "무용을 시작했고, 이후 뮤지컬과 방송에도 참여했습니다.",
     body:
       "2020년부터 공개된 활동과 사진, 영상을 연도별로 정리했습니다.",
     focus: ["Musical", "Dance", "Broadcast"],
