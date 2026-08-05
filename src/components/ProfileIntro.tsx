@@ -8,8 +8,7 @@ export function ProfileIntro() {
     <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
       <div className="flex flex-col justify-between">
         <div>
-          <p className="section-kicker">{site.profile.eyebrow}</p>
-          <p className="mt-5 max-w-3xl break-keep text-3xl font-medium leading-[1.28] tracking-[-0.045em] text-[var(--ink)] sm:text-4xl sm:leading-[1.22]">
+          <p className="max-w-3xl break-keep text-3xl font-medium leading-[1.28] tracking-[-0.045em] text-[var(--ink)] sm:text-4xl sm:leading-[1.22]">
             {site.profile.lead}
           </p>
           <p className="mt-7 max-w-2xl break-keep text-base leading-8 text-[var(--muted)] sm:text-lg">
@@ -37,8 +36,7 @@ export function ProfileIntro() {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
-        <div className="relative aspect-[4/3] overflow-hidden bg-zinc-200">
+      <div className="relative min-h-[460px] overflow-hidden bg-zinc-200 lg:min-h-[620px]">
           <Image
             src={site.profile.image}
             alt={site.profile.imageAlt}
@@ -46,14 +44,6 @@ export function ProfileIntro() {
             sizes="(max-width: 1024px) 100vw, 42vw"
             className="object-cover object-top"
           />
-        </div>
-        <div className="next-stage-panel flex min-h-[220px] flex-col justify-between p-6 sm:p-7">
-          <p className="text-[10px] font-medium tracking-[0.18em] text-white/55">{site.profile.nextStage.eyebrow}</p>
-          <div className="mt-12">
-            <h3 className="text-2xl font-medium tracking-[-0.04em] text-white">{site.profile.nextStage.title}</h3>
-            <p className="mt-3 break-keep text-sm leading-7 text-white/65">{site.profile.nextStage.body}</p>
-          </div>
-        </div>
       </div>
     </div>
   );

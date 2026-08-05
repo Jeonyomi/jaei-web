@@ -48,7 +48,6 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="mt-8 max-w-xl text-xs leading-5 text-[var(--muted-light)]">{site.hero.note}</p>
         </div>
 
         <div className="relative min-h-[560px] border-t border-black/10 bg-zinc-200 lg:min-h-full lg:border-l lg:border-t-0">
@@ -60,13 +59,6 @@ export function Hero() {
             sizes="(max-width: 1024px) 100vw, 48vw"
             className="object-cover"
           />
-          <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/65 via-black/15 to-transparent px-5 pb-5 pt-24 text-white sm:px-7 sm:pb-7">
-            <div>
-              <p className="text-xs font-medium tracking-[0.16em]">PORTRAIT / 2026</p>
-              <p className="mt-2 text-sm text-white/75">Growing through every stage.</p>
-            </div>
-            <span className="font-mono text-4xl font-light tracking-[-0.08em] text-white/85">01</span>
-          </div>
         </div>
       </div>
     </section>

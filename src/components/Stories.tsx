@@ -20,7 +20,7 @@ export function Stories() {
           className="group flex min-h-[360px] flex-col justify-between bg-[var(--ink)] p-7 text-white transition-transform duration-300 hover:-translate-y-1 sm:p-9"
         >
           <div className="flex items-center justify-between gap-4">
-            <p className="text-[10px] font-medium tracking-[0.18em] text-white/50">FEATURED STORY</p>
+            <p className="text-xs text-white/50">주요 소식</p>
             <ArrowUpRight className="h-5 w-5 text-white/60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
           </div>
           <div className="mt-16">

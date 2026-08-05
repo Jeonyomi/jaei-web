@@ -21,7 +21,6 @@ export function Journey() {
             <section key={year} className="grid grid-cols-1 border-b border-black/12 py-8 md:grid-cols-[150px_1fr] md:gap-8">
             <div>
               <h3 className="text-4xl font-medium tracking-[-0.055em] text-[var(--ink)]">{year}</h3>
-              <p className="mt-2 text-[10px] font-medium tracking-[0.18em] text-[var(--muted-light)]">STAGE LOG</p>
             </div>
             <ol className="mt-6 divide-y divide-black/10 md:mt-0">
               {items.map((item) => (

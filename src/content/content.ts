@@ -36,65 +36,57 @@ export type ActivityItem = {
 
 export const site = {
   title: "Jae-i on Stage",
-  description: "재이가 지나온 무대와 앞으로의 새로운 활동을 한 장면씩 쌓아가는 성장 아카이브",
+  description: "전재이의 공연과 활동을 정리한 개인 아카이브",
   nav: [
     { label: "재이 소개", href: "#about" },
     { label: "최근 활동", href: "#activities" },
-    { label: "성장 기록", href: "#journey" },
+    { label: "활동 기록", href: "#journey" },
     { label: "소식", href: "#stories" },
     { label: "갤러리", href: "#gallery" },
     { label: "응원", href: "#guestbook" },
   ] satisfies NavItem[],
   hero: {
-    eyebrow: "JAE-I · ACTIVITY ARCHIVE",
-    headline: "재이의 무대는\n계속됩니다.",
+    eyebrow: "JAE-I ON STAGE",
+    headline: "재이의 무대와\n활동 기록",
     subheadline:
-      "춤과 노래, 연기로 만나 온 순간들. 지나온 활동을 기록하고 앞으로의 새로운 무대를 한 장면씩 쌓아갑니다.",
+      "무용을 시작으로 뮤지컬과 방송, 여러 공연 무대에 참여해 온 기록을 모았습니다.",
     image: "/gallery/portrait-2026-02.jpg",
     imageAlt: "재이의 흑백 프로필 사진",
     ctas: [
       { label: "최근 활동 보기", href: "#activities", variant: "primary" as const },
-      { label: "성장 기록 보기", href: "#journey", variant: "secondary" as const },
+      { label: "활동 기록 보기", href: "#journey", variant: "secondary" as const },
     ],
-    note: "공식 활동과 공개 자료를 기준으로 업데이트합니다.",
   },
   highlights: [
-    { label: "ARCHIVE", value: "2020 → NOW", note: "무대와 성장의 기록" },
+    { label: "ARCHIVE", value: "2020 → NOW", note: "공연 · 방송 · 콩쿠르" },
     { label: "MUSICAL DEBUT", value: "2026", note: "〈빌리 엘리어트〉" },
     { label: "ON STAGE", value: "Musical · Dance", note: "노래 · 연기 · 퍼포먼스" },
   ],
   profile: {
-    eyebrow: "ABOUT JAE-I",
-    title: "무대 위에서 자라는 재이",
+    title: "전재이",
     lead:
-      "재이는 무용, 뮤지컬, 방송과 다양한 공연을 경험하며 자신만의 표현을 넓혀가고 있습니다.",
+      "무용을 시작으로 뮤지컬과 방송, 공연 무대에 참여해 왔습니다.",
     body:
-      "이곳은 하나의 작품을 소개하는 페이지가 아니라, 재이가 지나온 무대와 앞으로 만날 새로운 활동을 차곡차곡 기록하는 개인 아카이브입니다.",
-    focus: ["Musical", "Dance", "Stage Performance"],
+      "2020년부터 공개된 활동과 사진, 영상을 연도별로 정리했습니다.",
+    focus: ["Musical", "Dance", "Broadcast"],
     image: "/gallery/portrait-2026-01.jpg",
     imageAlt: "재이의 밝은 프로필 사진",
     instagram: {
       label: "Instagram @j_on_stage",
       href: "https://www.instagram.com/j_on_stage/",
     },
-    nextStage: {
-      eyebrow: "NEXT CHAPTER",
-      title: "다음 무대를 기다리는 중",
-      body: "새로운 활동과 공식 일정이 확인되면 이곳에 가장 최근 기록으로 차례로 업데이트합니다.",
-    },
   },
   activities: [
     {
       slug: "billy-elliot-2026",
       featured: true,
-      eyebrow: "RECENT ACTIVITY · 2026",
+      eyebrow: "2026",
       title: "뮤지컬 〈빌리 엘리어트〉",
       role: "발레걸즈 · 킬리 깁슨 역",
       period: "2026.04.12 — 07.26",
       venue: "블루스퀘어 우리은행홀",
-      status: "공연 종료 · ARCHIVE",
-      summary:
-        "재이의 첫 뮤지컬 무대. 춤과 노래, 연기를 함께 경험한 〈빌리 엘리어트〉는 앞으로 이어질 활동 기록의 새로운 출발점으로 남았습니다.",
+      status: "공연 종료",
+      summary: "재이의 첫 뮤지컬 출연작입니다.",
       mainImage: "/gallery/performance-2026-03.jpg",
       mainImageAlt: "뮤지컬 빌리 엘리어트 공연 장면",
       detailImage: "/gallery/performance-2026-08.jpg",
@@ -112,8 +104,8 @@ export const site = {
     },
   ] satisfies ActivityItem[],
   journey: {
-    title: "무대가 쌓인 시간",
-    note: "무용에서 뮤지컬, 방송과 행사 공연까지. 공개된 프로그램과 공식 기록을 기준으로 정리했습니다.",
+    title: "활동 기록",
+    note: "공개된 프로그램과 공식 자료를 기준으로 정리했습니다.",
     items: [
       {
         year: "2026",
@@ -223,16 +215,15 @@ export const site = {
     ] satisfies JourneyItem[],
   },
   stories: {
-    title: "소식과 기록",
-    note: "재이의 최근 활동을 다룬 공식 콘텐츠와 언론 기록입니다.",
+    title: "소식",
+    note: "공식 콘텐츠와 기사 링크입니다.",
     items: [
       {
         featured: true,
         date: "2026.04.23",
         source: "신시컴퍼니 블로그",
         title: "[빌Real] Ep10: 〈빌리 엘리어트〉 비하인드 공개",
-        summary:
-          "현장 분위기와 작품 준비 과정을 담은 〈빌리 엘리어트〉 비하인드 콘텐츠가 공개됐습니다.",
+        summary: "출연진의 연습과 공연 준비 과정을 소개한 콘텐츠입니다.",
         href: "https://blog.naver.com/seenseecom/224262656258",
       },
       {
@@ -240,7 +231,7 @@ export const site = {
         date: "2026.04.09",
         source: "신시컴퍼니 블로그",
         title: "[빌Real] Ep9: 쇼앤텔 비하인드 공개",
-        summary: "쇼앤텔의 무대 시연과 질의응답, 배우들의 연습실 풍경을 담은 기록입니다.",
+        summary: "쇼앤텔 무대 시연과 질의응답, 연습실 모습을 담았습니다.",
         href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224246675719&navType=by",
       },
       {
@@ -248,7 +239,7 @@ export const site = {
         date: "2026.04.06",
         source: "YouTube",
         title: "2026 영재발굴단 인피니티 영상 공개",
-        summary: "뮤지컬 〈빌리 엘리어트〉 차세대 주인공들과 작품의 이야기를 소개합니다.",
+        summary: "〈빌리 엘리어트〉 차세대 출연진을 소개한 영상입니다.",
         href: "https://www.youtube.com/watch?v=4eQ0dpWhT9o",
       },
       {
@@ -256,7 +247,7 @@ export const site = {
         date: "2026.03.26",
         source: "신시컴퍼니 블로그",
         title: "[빌Real] Ep8: 왓츠 인 마이 백 2화",
-        summary: "출연진의 애정 어린 소지품과 연습실 안팎의 모습을 만날 수 있는 비하인드 콘텐츠입니다.",
+        summary: "출연진의 소지품과 연습실 안팎 모습을 담았습니다.",
         href: "https://m.blog.naver.com/PostView.naver?blogId=seenseecom&logNo=224230054088&navType=by",
       },
       {
@@ -264,7 +255,7 @@ export const site = {
         date: "2026.03.10",
         source: "연합뉴스",
         title: "‘빌리 엘리어트’ 쇼앤텔 현장 공개",
-        summary: "고양아람누리 아람극장에서 열린 쇼앤텔의 주요 장면과 현장 분위기를 전했습니다.",
+        summary: "고양아람누리에서 열린 쇼앤텔 현장 기사입니다.",
         href: "https://naver.me/GLhjfDU4",
       },
       {
@@ -272,32 +263,31 @@ export const site = {
         date: "2026.02.10",
         source: "뉴데일리",
         title: "전체 상견례 및 연습 돌입 소식",
-        summary: "전체 상견례와 함께 본격적인 연습이 시작된 현장 소식을 전했습니다.",
+        summary: "상견례와 연습 시작을 알린 기사입니다.",
         href: "https://www.newdaily.co.kr/site/data/html/2026/02/10/2026021000060.html",
       },
     ] satisfies StoryItem[],
   },
   gallery: {
-    title: "장면들",
-    note: "프로필, 연습과 공연의 순간을 시간에 따라 계속 더해가는 이미지 아카이브입니다.",
+    title: "사진과 영상",
+    note: "프로필과 공연 사진, 영상을 모았습니다.",
     images: [
-      { src: "/gallery/portrait-2026-01.jpg", alt: "재이 프로필 사진", caption: "Portrait · 2026" },
-      { src: "/gallery/1.jpg", alt: "재이의 전신 프로필 사진", caption: "Portrait · 2026" },
-      { src: "/gallery/2.jpg", alt: "재이의 빌리 엘리어트 프로필 사진", caption: "Billy Elliot · 2026" },
-      { src: "/gallery/performance-2026-clip-01.mp4", alt: "재이 공연 현장 영상", caption: "On Stage · 2026", type: "video" },
-      { src: "/gallery/performance-2026-01.jpg", alt: "재이의 공연 준비 기록", caption: "Backstage · 2026" },
-      { src: "/gallery/performance-2026-02.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면", caption: "Billy Elliot · 2026" },
-      { src: "/gallery/performance-2026-04.jpg", alt: "뮤지컬 빌리 엘리어트 커튼콜 장면", caption: "Curtain Call · 2026" },
-      { src: "/gallery/performance-2026-06.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면", caption: "On Stage · 2026" },
-      { src: "/gallery/performance-2026-07.jpg", alt: "뮤지컬 빌리 엘리어트 활동 사진", caption: "Company · 2026" },
+      { src: "/gallery/portrait-2026-01.jpg", alt: "재이 프로필 사진", caption: "" },
+      { src: "/gallery/1.jpg", alt: "재이의 전신 프로필 사진", caption: "" },
+      { src: "/gallery/2.jpg", alt: "재이의 빌리 엘리어트 프로필 사진", caption: "빌리 엘리어트 · 2026" },
+      { src: "/gallery/performance-2026-clip-01.mp4", alt: "재이 공연 현장 영상", caption: "공연 · 2026", type: "video" },
+      { src: "/gallery/performance-2026-01.jpg", alt: "재이의 공연 준비 기록", caption: "공연 준비 · 2026" },
+      { src: "/gallery/performance-2026-02.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면", caption: "빌리 엘리어트 · 2026" },
+      { src: "/gallery/performance-2026-04.jpg", alt: "뮤지컬 빌리 엘리어트 커튼콜 장면", caption: "커튼콜 · 2026" },
+      { src: "/gallery/performance-2026-06.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면", caption: "공연 · 2026" },
+      { src: "/gallery/performance-2026-07.jpg", alt: "뮤지컬 빌리 엘리어트 활동 사진", caption: "출연진 · 2026" },
     ],
   },
   guestbook: {
-    title: "재이에게 응원 보내기",
-    note: "비방, 개인정보 또는 상업성 내용은 저장되지 않거나 삭제될 수 있습니다.",
+    title: "응원 메시지",
+    note: "비방, 개인정보, 상업성 내용은 삭제될 수 있습니다.",
   },
   footer: {
-    disclaimer:
-      "재이가 지나온 무대와 성장 기록을 모으는 개인 아카이브입니다. 공연·기사 정보와 이미지 권리는 각 제작사 및 원출처를 우선합니다.",
+    disclaimer: "공연·기사 정보와 이미지의 권리는 각 제작사와 원출처에 있습니다.",
   },
 };

@@ -1,6 +1,6 @@
 # Jae-i on Stage
 
-재이가 지나온 무대와 앞으로의 새로운 활동을 한 장면씩 쌓아가는 개인 활동 아카이브입니다.
+전재이의 공연과 활동을 정리한 개인 아카이브입니다.
 
 - Production: https://jaei-web.vercel.app/
 - Instagram: https://www.instagram.com/j_on_stage/
@@ -14,7 +14,7 @@
 5. **Gallery** — 프로필·공연 이미지와 영상
 6. **Cheer** — 공개 노출 없이 저장되는 응원 메시지
 
-〈빌리 엘리어트〉는 사이트 전체의 정체성이 아니라 2026년 최근 활동과 성장 기록 중 하나로 다룹니다.
+〈빌리 엘리어트〉는 2026년 최근 활동으로 기록합니다.
 
 ## Content updates
 

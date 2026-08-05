@@ -8,9 +8,8 @@ import { site } from "@/content/content";
 export function Gallery() {
   return (
     <div className="space-y-6">
-      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
         <p className="max-w-2xl break-keep text-base leading-8 text-[var(--muted)]">{site.gallery.note}</p>
-        <p className="text-xs tracking-[0.12em] text-[var(--muted-light)]">SWIPE TO EXPLORE</p>
       </div>
 
       <div className="relative">
@@ -20,7 +19,7 @@ export function Gallery() {
           style={{ scrollSnapType: "x mandatory" }}
           aria-label="재이 포토·영상 갤러리"
         >
-          {site.gallery.images.map((item, index) => (
+          {site.gallery.images.map((item) => (
             <figure
               key={item.src}
               className="group w-[78%] shrink-0 sm:w-[44%] lg:w-[31%]"
@@ -45,14 +44,12 @@ export function Gallery() {
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                   />
                 )}
-                <span className="absolute left-4 top-4 grid h-8 w-8 place-items-center bg-black/55 font-mono text-xs text-white backdrop-blur-sm">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
               </div>
-              <figcaption className="flex items-center justify-between border-b border-black/12 py-3">
-                <span className="text-xs font-medium tracking-[0.08em] text-[var(--muted)]">{item.caption}</span>
-                <span className="text-[10px] tracking-[0.12em] text-[var(--muted-light)]">JAE-I ARCHIVE</span>
-              </figcaption>
+              {item.caption ? (
+                <figcaption className="border-b border-black/12 py-3 text-xs font-medium text-[var(--muted)]">
+                  {item.caption}
+                </figcaption>
+              ) : null}
             </figure>
           ))}
         </div>

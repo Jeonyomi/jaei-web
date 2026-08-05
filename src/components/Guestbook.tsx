@@ -35,7 +35,7 @@ export function Guestbook() {
         throw new Error(json?.error || `HTTP ${res.status}`);
       }
 
-      setSent("응원 메시지가 저장되었습니다. 감사합니다!");
+      setSent("응원 메시지를 저장했습니다.");
       setName("");
       setMsg("");
     } catch (err) {
@@ -98,8 +98,7 @@ export function Guestbook() {
       </form>
 
       <div className="surface-tint p-5">
-        <p className="section-kicker">Guide</p>
-        <p className="mt-2 text-sm font-medium text-zinc-950">안내</p>
+        <p className="text-sm font-medium text-zinc-950">메시지 안내</p>
         <p className="mt-2 text-sm leading-6 text-zinc-700">{site.guestbook.note}</p>
         <p className="mt-4 text-xs text-zinc-500">메시지는 저장되며, 공개 페이지에는 표시되지 않습니다.</p>
       </div>

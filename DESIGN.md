@@ -11,7 +11,7 @@ The visual language is an editorial stage journal:
 - large, tightly tracked type paired with real photography
 - square or subtly rounded surfaces rather than soft SaaS cards
 - asymmetric image/copy compositions
-- visible year, chapter, and archive labels
+- clear section numbering and factual metadata
 
 ## 2. Tokens
 
@@ -26,7 +26,7 @@ The visual language is an editorial stage journal:
 | Accent strong | `#8f3f32` |
 | Hairline | `rgba(32, 29, 26, 0.12)` |
 
-Typography uses Geist Sans and Geist Mono from the existing Next.js stack. Display headings use medium weight, tight tracking, and scale for hierarchy. Mono is limited to archive labels and metadata.
+Typography uses Geist Sans and Geist Mono from the existing Next.js stack. Display headings use medium weight, tight tracking, and scale for hierarchy. Mono is limited to section labels and metadata.
 
 ## 3. Composition
 
@@ -34,7 +34,7 @@ Typography uses Geist Sans and Geist Mono from the existing Next.js stack. Displ
 
 - Split editorial composition on desktop: identity/copy at left, full-height portrait at right.
 - Stacks to copy then portrait below 1024px.
-- The headline is about Jae-i’s continuing journey, never a specific production.
+- The headline identifies the page as Jae-i’s stage and activity record.
 - Primary navigation points to recent activity and the full journey.
 
 ### Archive strip
@@ -64,7 +64,7 @@ Chronological records are grouped by year with border-separated rows. New featur
 
 ### Stories and gallery
 
-Stories use one featured editorial panel plus a compact source list. Gallery cards carry archive numbers and captions, and prioritize Jae-i’s portraits before production imagery.
+Stories use one featured editorial panel plus a compact source list. The gallery prioritizes Jae-i’s portraits before production imagery and shows captions only when they add context.
 
 ## 4. Interaction and accessibility
 
