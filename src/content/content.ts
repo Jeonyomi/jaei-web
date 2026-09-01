@@ -281,6 +281,9 @@ export const site = {
       { src: "/gallery/performance-2026-04.jpg", alt: "뮤지컬 빌리 엘리어트 커튼콜 장면" },
       { src: "/gallery/performance-2026-06.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면" },
       { src: "/gallery/performance-2026-07.jpg", alt: "뮤지컬 빌리 엘리어트 활동 사진" },
+      { src: "/gallery/activity-2026-09-01-01.jpg", alt: "재이 2026년 9월 활동 사진" },
+      { src: "/gallery/activity-2026-09-01-02.jpg", alt: "재이 2026년 9월 활동 사진" },
+      { src: "/gallery/activity-2026-09-01-03.jpg", alt: "재이 2026년 9월 활동 사진" },
     ],
   },
   guestbook: {
