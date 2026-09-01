@@ -272,6 +272,9 @@ export const site = {
     title: "사진과 영상",
     note: "프로필과 공연 사진, 영상을 모았습니다.",
     images: [
+      { src: "/gallery/activity-2026-09-01-01.jpg", alt: "재이 2026년 9월 활동 사진" },
+      { src: "/gallery/activity-2026-09-01-02.jpg", alt: "재이 2026년 9월 활동 사진" },
+      { src: "/gallery/activity-2026-09-01-03.jpg", alt: "재이 2026년 9월 활동 사진" },
       { src: "/gallery/portrait-2026-01.jpg", alt: "재이 프로필 사진" },
       { src: "/gallery/1.jpg", alt: "재이의 전신 프로필 사진" },
       { src: "/gallery/2.jpg", alt: "재이의 빌리 엘리어트 프로필 사진" },
@@ -281,9 +284,6 @@ export const site = {
       { src: "/gallery/performance-2026-04.jpg", alt: "뮤지컬 빌리 엘리어트 커튼콜 장면" },
       { src: "/gallery/performance-2026-06.jpg", alt: "뮤지컬 빌리 엘리어트 공연 장면" },
       { src: "/gallery/performance-2026-07.jpg", alt: "뮤지컬 빌리 엘리어트 활동 사진" },
-      { src: "/gallery/activity-2026-09-01-01.jpg", alt: "재이 2026년 9월 활동 사진" },
-      { src: "/gallery/activity-2026-09-01-02.jpg", alt: "재이 2026년 9월 활동 사진" },
-      { src: "/gallery/activity-2026-09-01-03.jpg", alt: "재이 2026년 9월 활동 사진" },
     ],
   },
   guestbook: {
